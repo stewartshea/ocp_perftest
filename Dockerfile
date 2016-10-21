@@ -1,7 +1,7 @@
 ##OCP Infrastucture Performance Benchmark Container
 ##Thanks to https://github.com/t0t0/docker-phoronix for the initial work
 #Base Image
-FROM    alpine
+FROM    alpine:3.4
 
 # File Author / Maintainer
 MAINTAINER info@arctiq.ca shea.stewart@arctiq.ca
@@ -9,11 +9,9 @@ MAINTAINER info@arctiq.ca shea.stewart@arctiq.ca
 
 #Add repositories
 RUN echo "ipv6" >> /etc/modules
-RUN echo "http://dl-1.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories; \
-    echo "http://dl-2.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories; \
-    echo "http://dl-3.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories; \
-    echo "http://dl-4.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories; \
-    echo "http://dl-5.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.4/community" >> /etc/apk/repositories; \
+    echo "http://dl-cdn.alpinelinux.org/alpine/v3.4/main" >> /etc/apk/repositories;
+
 
 # Install dependencies
 RUN apk update && apk add --no-cache make gcc g++ libtool linux-headers perl pcre-dev php php-dom php-zip php-json
