@@ -4,7 +4,7 @@
 FROM    alpine
 
 # File Author / Maintainer
-MAINTAINER info@arctiq.ca
+MAINTAINER info@arctiq.ca shea.stewart@arctiq.ca
 
 
 #Add repositories
