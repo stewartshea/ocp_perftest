@@ -13,10 +13,8 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.4/community" >> /etc/apk/repos
     echo "http://dl-cdn.alpinelinux.org/alpine/v3.4/main" >> /etc/apk/repositories;
 
     # Use dl-4, as the main repo is down (23.08.2016)
-RUN sed -i -e 's/dl-cdn/dl-4/' /etc/apk/repositories && \
-    apk add --no-cache \
-        bash \
-        build-base \
+RUN apk add --no-cache nodejs || \
+    (sed -i -e 's/dl-cdn/dl-4/g' /etc/apk/repositories && apk add --no-cache nodejs)
 
 
 # Install dependencies
