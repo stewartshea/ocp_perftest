@@ -6,6 +6,9 @@ FROM    alpine
 # File Author / Maintainer
 MAINTAINER info@arctiq.ca
 
+#Fix network issue
+RUN echo "ipv6" >> /etc/modules
+
 # Install dependencies
 RUN apk update && apk add --no-cache make gcc g++ libtool linux-headers perl pcre-dev php php-dom php-zip php-json
 
