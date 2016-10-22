@@ -39,10 +39,10 @@ RUN phoronix-test-suite install pts/iozone
 
 
 # Copy custom scripts
-COPY scripts/ .
+COPY scripts/* .
 
 # Check working directory
-CMD chmod +x /scripts/run.sh
+CMD chmod +x run.sh
 
 # Execute benchmark script
-CMD ["/scripts/run.sh"]
+CMD ["run.sh"]
