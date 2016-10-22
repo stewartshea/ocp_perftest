@@ -45,4 +45,6 @@ COPY scripts/ .
 CMD chmod +x run.sh
 
 # Execute benchmark script
-ENTRYPOINT ["sh", "run.sh"]
+#ENTRYPOINT ["sh", "run.sh"]
+ENTRYPOINT ["phoronix-test-suite"]
+EXPOSE 80
