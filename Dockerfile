@@ -41,5 +41,9 @@ RUN phoronix-test-suite install pts/iozone
 # Copy custom scripts
 COPY scripts/ .
 
+# Check working directory
+CMD pwd
+CMD ls -lha
+
 # Execute benchmark script
 CMD ./run.sh
