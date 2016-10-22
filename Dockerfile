@@ -45,4 +45,4 @@ COPY scripts/ .
 CMD chmod +x run.sh
 
 # Execute benchmark script
-CMD ["run.sh"]
+ENTRYPOINT ["sh", "run.sh"]
