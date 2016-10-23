@@ -11,15 +11,15 @@ MAINTAINER info@arctiq.ca shea.stewart@arctiq.ca
 RUN echo "ipv6" >> /etc/modules
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.4/community" >> /etc/apk/repositories; \
     echo "http://dl-cdn.alpinelinux.org/alpine/v3.4/main" >> /etc/apk/repositories;
+RUN apk add --no-cache  --repository http://dl-cdn.alpinelinux.org/alpine/edge/main --repository  http://dl-cdn.alpinelinux.org/alpine/edge/community  docker
 
 # Use dl-4, as the main repo is down (23.08.2016)
 RUN apk add --no-cache nodejs make gcc g++ libtool linux-headers || \
     (sed -i -e 's/dl-cdn/dl-4/g' /etc/apk/repositories && apk add --no-cache nodejs make gcc g++ libtool linux-headers)
 
-RUN apk add --no-cache perl pcre-dev  || \
-        (sed -i -e 's/dl-cdn/dl-4/g' /etc/apk/repositories && apk add --no-cache perl pcre-dev)
+RUN apk add --no-cache perl pcre-dev  ||  php php-dom php-zip php-json \
+        (sed -i -e 's/dl-cdn/dl-4/g' /etc/apk/repositories && apk add --no-cache perl pcre-dev  php php-dom php-zip php-json)
 
-RUN docker-php-ext-install php php-dom php-zip php-json
 
 # Install dependencies
 #RUN apk update && apk add --no-cache make gcc g++ libtool linux-headers perl pcre-dev php php-dom php-zip php-json
