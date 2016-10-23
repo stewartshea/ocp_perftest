@@ -17,7 +17,7 @@ RUN apk add --no-cache  --repository http://dl-cdn.alpinelinux.org/alpine/edge/m
 RUN apk add --no-cache nodejs make gcc g++ libtool linux-headers || \
     (sed -i -e 's/dl-cdn/dl-4/g' /etc/apk/repositories && apk add --no-cache nodejs make gcc g++ libtool linux-headers)
 
-RUN apk add --no-cache perl pcre-dev  ||  php php-dom php-zip php-json \
+RUN apk add --no-cache perl pcre-dev php php-dom php-zip php-json ||  \
         (sed -i -e 's/dl-cdn/dl-4/g' /etc/apk/repositories && apk add --no-cache perl pcre-dev  php php-dom php-zip php-json)
 
 
