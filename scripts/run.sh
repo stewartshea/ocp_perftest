@@ -1,6 +1,7 @@
 #!/bin/sh
 # Note: I've written this using sh so it works in the busybox container too
-
+#
+cat /etc/phoronix-test-suite.xml
 
 # start service in background here
 phoronix-test-suite start-remote-gui-server
