@@ -16,9 +16,10 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.4/community" >> /etc/apk/repos
 RUN apk add --no-cache nodejs make gcc g++ libtool linux-headers || \
     (sed -i -e 's/dl-cdn/dl-4/g' /etc/apk/repositories && apk add --no-cache nodejs make gcc g++ libtool linux-headers)
 
-RUN apk add --no-cache perl pcre-dev php php-dom php-zip php-json || \
-        (sed -i -e 's/dl-cdn/dl-4/g' /etc/apk/repositories && apk add --no-cache perl pcre-dev php php-dom php-zip php-json)
+RUN apk add --no-cache perl pcre-dev  || \
+        (sed -i -e 's/dl-cdn/dl-4/g' /etc/apk/repositories && apk add --no-cache perl pcre-dev)
 
+RUN docker-php-ext-install php php-dom php-zip php-json
 
 # Install dependencies
 #RUN apk update && apk add --no-cache make gcc g++ libtool linux-headers perl pcre-dev php php-dom php-zip php-json
