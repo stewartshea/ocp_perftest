@@ -47,6 +47,5 @@ COPY scripts/ .
 CMD chmod +x run.sh
 
 # Execute benchmark script
-#ENTRYPOINT ["sh", "run.sh"]
-ENTRYPOINT ["start-remote-gui-server", "start-ws-server"]
+ENTRYPOINT ["sh", "run.sh"]
 EXPOSE 80
