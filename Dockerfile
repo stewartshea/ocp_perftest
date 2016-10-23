@@ -16,7 +16,7 @@ RUN apk add --no-cache  --repository http://dl-cdn.alpinelinux.org/alpine/edge/m
 # Use dl-4, as the main repo is down (23.08.2016)
 RUN apk add --no-cache nodejs make gcc g++ libtool linux-headers
 
-RUN apk add --no-cache perl pcre-dev php5 php5-sockers php5-gd php5-dom php5-zip php5-json
+RUN apk add --no-cache perl pcre-dev php5 php5-sockets php5-gd php5-dom php5-zip php5-json
 
 
 # Install dependencies
