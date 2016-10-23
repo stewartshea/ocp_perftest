@@ -43,6 +43,9 @@ RUN phoronix-test-suite install pts/iozone
 # Copy custom scripts
 COPY scripts/ .
 
+#Copy Phoronix Config Files
+COPY config/phoronix-test-suite.xml /etc/
+
 # Check working directory
 CMD chmod +x run.sh
 
