@@ -14,11 +14,9 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.4/community" >> /etc/apk/repos
 RUN apk add --no-cache  --repository http://dl-cdn.alpinelinux.org/alpine/edge/main --repository  http://dl-cdn.alpinelinux.org/alpine/edge/community  docker
 
 # Use dl-4, as the main repo is down (23.08.2016)
-RUN apk add --no-cache nodejs make gcc g++ libtool linux-headers || \
-    (sed -i -e 's/dl-cdn/dl-4/g' /etc/apk/repositories && apk add --no-cache nodejs make gcc g++ libtool linux-headers)
+RUN apk add --no-cache nodejs make gcc g++ libtool linux-headers
 
-RUN apk add --no-cache perl pcre-dev php php-dom php-zip php-json ||  \
-        (sed -i -e 's/dl-cdn/dl-4/g' /etc/apk/repositories && apk add --no-cache perl pcre-dev  php php-dom php-zip php-json)
+RUN apk add --no-cache perl pcre-dev php5 php-dom php-zip php-json
 
 
 # Install dependencies
