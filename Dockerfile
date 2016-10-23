@@ -48,5 +48,5 @@ CMD chmod +x run.sh
 
 # Execute benchmark script
 #ENTRYPOINT ["sh", "run.sh"]
-ENTRYPOINT ["phoronix-test-suite"]
+ENTRYPOINT ["start-remote-gui-server", "start-ws-server"]
 EXPOSE 80
