@@ -60,7 +60,7 @@
       <ProxyPort></ProxyPort>
     </Networking>
     <Server>
-      <RemoteAccessPort></RemoteAccessPort>
+      <RemoteAccessPort>80</RemoteAccessPort>
       <Password></Password>
       <WebSocketPort>80</WebSocketPort>
       <AdvertiseServiceZeroConf>TRUE</AdvertiseServiceZeroConf>
