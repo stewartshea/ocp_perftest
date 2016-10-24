@@ -62,7 +62,7 @@
     <Server>
       <RemoteAccessPort></RemoteAccessPort>
       <Password></Password>
-      <WebSocketPort></WebSocketPort>
+      <WebSocketPort>80</WebSocketPort>
       <AdvertiseServiceZeroConf>TRUE</AdvertiseServiceZeroConf>
       <PhoromaticStorage>~/.phoronix-test-suite/phoromatic/</PhoromaticStorage>
     </Server>
