@@ -8,19 +8,11 @@ MAINTAINER info@arctiq.ca shea.stewart@arctiq.ca
 
 
 #Add repositories
-RUN echo "ipv6" >> /etc/modules
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.4/community" >> /etc/apk/repositories; \
-    echo "http://dl-cdn.alpinelinux.org/alpine/v3.4/main" >> /etc/apk/repositories;
 RUN apk add --no-cache  --repository http://dl-cdn.alpinelinux.org/alpine/edge/main --repository  http://dl-cdn.alpinelinux.org/alpine/edge/community  docker
 
-# Use dl-4, as the main repo is down (23.08.2016)
-RUN apk add --no-cache nodejs make gcc g++ libtool linux-headers
+#Install deps
+RUN apk add --no-cache nodejs make gcc g++ libtool linux-headers perl pcre-dev php5 php5-sockets php5-gd php5-dom php5-zip php5-json php5-sqlite
 
-RUN apk add --no-cache perl pcre-dev php5 php5-sockets php5-gd php5-dom php5-zip php5-json php5-sqlite3 
-
-
-# Install dependencies
-#RUN apk update && apk add --no-cache make gcc g++ libtool linux-headers perl pcre-dev php php-dom php-zip php-json
 
 # Download  & extract Phoronix package
 RUN wget http://www.phoronix-test-suite.com/download.php?file=phoronix-test-suite-6.6.1 -O phoronix-test-suite-6.6.1.tar.gz
