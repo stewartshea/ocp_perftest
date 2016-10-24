@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Start service in background here
-phoronix-test-suite start-phoromatic-server &
+phoronix-test-suite start-phoromatic-server
 phoronix-test-suite phoromatic.connect ocpperftest-ocpperftest.pathfinder.gov.bc.ca:80/6CU5VN
 
 #while [ 1 ]
