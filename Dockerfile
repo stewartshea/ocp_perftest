@@ -11,7 +11,7 @@ MAINTAINER info@arctiq.ca shea.stewart@arctiq.ca
 RUN apk add --no-cache  --repository http://dl-cdn.alpinelinux.org/alpine/edge/main --repository  http://dl-cdn.alpinelinux.org/alpine/edge/community  docker
 
 #Install deps
-RUN apk add --no-cache nodejs make gcc g++ libtool linux-headers perl pcre-dev php5 php5-sockets php5-gd php5-dom php5-zip php5-json php5-sqlite
+RUN apk add --no-cache nodejs make gcc g++ libtool linux-headers perl pcre-dev php5 php5-sockets php5-gd php5-dom php5-zip php5-json php5-sqlite3
 
 
 # Download  & extract Phoronix package
