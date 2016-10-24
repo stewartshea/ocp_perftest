@@ -60,9 +60,9 @@
       <ProxyPort></ProxyPort>
     </Networking>
     <Server>
-      <RemoteAccessPort>80</RemoteAccessPort>
-      <Password>password</Password>
-      <WebSocketPort>80</WebSocketPort>
+      <RemoteAccessPort></RemoteAccessPort>
+      <Password></Password>
+      <WebSocketPort></WebSocketPort>
       <AdvertiseServiceZeroConf>TRUE</AdvertiseServiceZeroConf>
       <PhoromaticStorage>~/.phoronix-test-suite/phoromatic/</PhoromaticStorage>
     </Server>

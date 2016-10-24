@@ -42,5 +42,5 @@ COPY config/phoronix-test-suite.xml /etc/
 CMD chmod +x run.sh
 
 # Execute benchmark script
-ENTRYPOINT ["sh", "run.sh"]
+ENTRYPOINT ["sh", "phoronix-test-suite start-phoromatic-server"]
 EXPOSE 80
