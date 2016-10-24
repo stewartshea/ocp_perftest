@@ -3,10 +3,10 @@
 # Start service in background here
 phoronix-test-suite start-phoronix-server
 
- 
-while [1]
+
+while [ 1 ]
 do
-	wait 5
+	sleep 5
 done
 
 #echo "[hit enter key to exit] or run 'docker stop <container>'"
