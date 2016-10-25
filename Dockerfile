@@ -13,7 +13,8 @@ RUN apk add --no-cache  --repository http://dl-cdn.alpinelinux.org/alpine/edge/m
 #Install deps
 RUN apk add --no-cache nodejs make gcc g++ libtool linux-headers perl pcre-dev php5 php5-sockets php5-gd php5-dom php5-zip php5-json php5-sqlite3
 
-RUN apk add --no-cache python autoconf popt libaio
+RUN apk add --no-cache python autoconf
+RUN apk add --no-cache popt libaio
 
 
 # Download  & extract Phoronix package
